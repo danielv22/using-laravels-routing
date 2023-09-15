@@ -1,4 +1,8 @@
-@php($record_counter = 0)
+@php
+    $record_counter = 0;
+    $pattern = '/(\d{1,3})((\.\d{3})*)(\.?\d{1,2})*(\d*)$/';
+    $groups = '$1$2$4.$5';
+@endphp
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +14,8 @@
     <!-- Style -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body style="height: 100%; background-color: #1F2937;">
+    <div>
     @if ( isset( $countries ) and isset( $records_to_show ) and isset( $lower_population )
             and isset( $order_by ) and isset( $order ) )
         <div class="relative overflow-x-auto">
@@ -24,7 +29,8 @@
                         <th scope="col" class="px-6 py-3">Descripción</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody style="background-color: #1F2937;">
+                    <div>
                     @foreach ($countries as $country => $info)
 
                         @if ($record_counter < $records_to_show)
@@ -37,7 +43,7 @@
                                     @endif
                                     <td class="px-6 py-4">{{ ucfirst($info['capital']) }}</td>
                                     <td class="px-6 py-4">{{ $info['currency'] }}</td>
-                                    <td class="px-6 py-4">{{ $info['population'] }}</td>
+                                    <td class="px-6 py-4">{{ number_format($info['population'] / 1000, 3, '.', "'") }}</td>
                                     <td class="px-6 py-4">{{ $info['description'] }}</td>
                                 </tr>
                                 @php($record_counter++)
@@ -52,5 +58,6 @@
             </table>
         </div>
     @endif
+    </div>
 </body>
 </html>
