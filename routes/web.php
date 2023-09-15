@@ -112,5 +112,5 @@ Route::get('/countries', function () {
 
     $ordered_countries = Utilities::orderAsocArrayByAnyKey($info);
 
-    return view('listOfCountries', $ordered_countries);
+    return view('listCountries', $ordered_countries);
 });
