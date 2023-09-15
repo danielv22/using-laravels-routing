@@ -25,7 +25,7 @@ Route::get('/countries', function () {
             'colombia' => [
                 'capital' => 'Bogotá',
                 'currency' => 'COP',
-                'population' => 50880000,
+                'population' => '50880000',
                 'description' => 'Colombia es un país del extremo norte de Sudamérica. Su paisaje cuenta con bosques tropicales,
                     las montañas de los Andes y varias plantaciones de café. En Bogotá, su capital a gran altura,
                     el distrito Zona Rosa es famoso por sus restaurantes y tiendas.'
@@ -33,7 +33,7 @@ Route::get('/countries', function () {
             'mexico' => [
                 'capital' => 'Ciudad de México',
                 'currency' => 'MXN',
-                'population' => 128900000,
+                'population' => '128900000',
                 'description' => 'México es un país entre los Estados Unidos y América Central, conocido por las playas en el Pacífico
                     el golfo de México, y su diverso paisaje de montañas, desiertos y selvas. Las ruinas antiguas, como
                     Teotihuacán y la ciudad maya de Chichén Itzá, se distribuyen por el país, al igual que las ciudades
@@ -43,7 +43,7 @@ Route::get('/countries', function () {
             'estados_unidos' => [
                 'capital' => 'Washington D.C',
                 'currency' => 'USD',
-                'population' => 329500000,
+                'population' => '329500000',
                 'description' => 'Estados Unidos es un país de 50 estados que ocupa una extensa franja de América del Norte,
                     con Alaska en el noroeste y Hawái que extiende la presencia del país en el océano
                     Pacífico. Entre las principales ciudades de la costa del Atlántico, se encuentran Nueva York,
@@ -54,7 +54,7 @@ Route::get('/countries', function () {
             'canada' => [
                 'capital' => 'Ottawa',
                 'currency' => 'CAD',
-                'population' => 39566248,
+                'population' => '39566248',
                 'description' => 'Canadá es una nación diversa, tolerante, pacífica y acogedora, conocida por
                     su naturaleza y su impresionante belleza natural. Es un país vasto y variado,
                     un lugar que vale la pena conocer por sus aventuras y sofisticada cultura. Las
@@ -67,7 +67,7 @@ Route::get('/countries', function () {
             'hawai' => [
                 'capital' => 'Honolulu',
                 'currency' => 'USD',
-                'population' => 1211537,
+                'population' => '1211537',
                 'description' => 'Hawaii es un archipiélago situado en medio del Océano Pacífico que conforma
                     uno de los estados insulares de los Estados Unidos. Este conjunto de islas
                     representa uno de los destinos turísticos más importantes de la Polinesia. Su
@@ -79,7 +79,7 @@ Route::get('/countries', function () {
             'bahamas' => [
                 'capital' => 'Nasáu',
                 'currency' => 'BSD',
-                'population' => 407906,
+                'population' => '407906',
                 'description' => 'Constituido por más de 700 islas (de las cuales 24 están habitadas), cayos e
                     islotes en el océano Atlántico, está ubicado al norte de Cuba, Haití y República
                     Dominicana, noroeste de Islas Turcas y Caicos, al sureste del estado estadounidense
@@ -94,7 +94,7 @@ Route::get('/countries', function () {
             'islas_turcas_y_caicos' => [
                 'capital' => 'Cockburn Town',
                 'currency' => 'USD',
-                'population' => 55926,
+                'population' => '55926',
                 'description' => 'En nombre de las islas Turcas proviene de un cactus autóctono, la cabeza del turco
                     (Melocactus intortus), cuya parte superior escarlata se asemeja a un fez. El nombre
                     Caicos puede derivar de caya hico, una frase que significa "cadena de islas" en el idioma
@@ -112,5 +112,5 @@ Route::get('/countries', function () {
 
     $ordered_countries = Utilities::orderAsocArrayByAnyKey($info);
 
-    return view('listOfCountries', $ordered_countries);
+    return view('listCountries', $ordered_countries);
 });
