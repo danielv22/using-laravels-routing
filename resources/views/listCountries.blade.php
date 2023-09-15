@@ -1,8 +1,4 @@
-@php
-    $record_counter = 0;
-    $pattern = '/(\d{1,3})((\.\d{3})*)(\.?\d{1,2})*(\d*)$/';
-    $groups = '$1$2$4.$5';
-@endphp
+@php($record_counter = 0)
 <!DOCTYPE html>
 <html lang="en">
 <head>
