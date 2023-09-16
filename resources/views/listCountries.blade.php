@@ -30,7 +30,7 @@
                     @foreach ($countries as $country => $info)
 
                         @if ($record_counter < $records_to_show)
-                            @if ($info['population'] <= $lower_population)
+                            @if ($info['population'] >= $lower_population)
                                 <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                                     @if (str_contains($country, '_'))
                                         <td class="px-6 py-4">{{ ucfirst(implode(' ', explode('_', $country))) }}</td>
