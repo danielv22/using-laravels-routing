@@ -19,7 +19,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/countries', function () {
+Route::get('/paises', function () {
     $info = [
         'countries' => [
             'colombia' => [
