@@ -42,7 +42,7 @@ Create a new route called "`/paises`" in a new project by using ***Framwork Lara
 ]
 ```
 
-| 💡: More countries could added to do a more complete exercise.                  |
+| 💡:  More countries could be added to do a more complete exercise.                   |
 | --------------------------------------------------------------------------------| 
 
 In the Blade template, it may show a table with the received countries, as appears below:
@@ -76,8 +76,8 @@ In the Blade template, it may show a table with the received countries, as appea
     </tbody>
 </table>
 
-And like this, so on. You should pay special attention to the format of the data (display numbers with a million separator and period, for instance). In the Blade template you must
-template to validate that all data is received correctly.
+And like this, so on. You should pay special attention to the format of the data (display numbers with a million separator and period, for instance). In the *Blade template* you must
+validate that all data is received correctly.
 
 In addition to displaying the information, the table must show only the number of records that are received in the key "records_to_show", that have a minimum population that is found in the key "lower_population". Finally, the order of the records must be determined by the field found in the "order_by" key by using the sorting rule indicated in "order".
 
