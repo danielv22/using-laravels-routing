@@ -1,5 +1,4 @@
 <?php
-include_once "../storage/utilities.php";
 
 use Illuminate\Support\Facades\Route;
 use Storage\Utilities;
